@@ -12,6 +12,8 @@ import './../node_modules/font-awesome/css/font-awesome.css'
 import './../node_modules/animate.css/animate.min.css'
 import './../public/styles/style.css'
 
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
 ReactDOM.render(
 <Router history={hashHistory}>{routes}</Router>,
     document.getElementById('root')
