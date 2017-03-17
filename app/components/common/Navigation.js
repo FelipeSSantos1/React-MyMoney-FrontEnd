@@ -29,7 +29,7 @@ class Navigation extends Component {
                                     <span className="text-muted text-xs block">Developer<b className="caret"></b></span>
                                 </span>
                             </a>
-                            <ul className="dropdown-menu animated fadeInRight m-t-xs">
+                            <ul className="dropdown-menu animated bounceIn m-t-xs">
                                 <li><a href="#"><i className="fa fa-id-card-o"></i>  Profile</a></li>
                             </ul>
                         </div>
@@ -38,14 +38,22 @@ class Navigation extends Component {
                         </div>
                     </li>
 
-                    <li className={this.activeRoute("/dashboard")}>
-                        <Link to="/dashboard"><i className="fa fa-dashboard"></i> <span className="nav-label">Dashboard</span></Link>
-                    </li>
-                    <li>
-                        <a href="#"><i className="fa fa-edit"></i> <span className="nav-label">Cadastros</span><span className="fa arrow"></span></a>
-                        <ul className="nav nav-second-level collapse">
+                    <li className={this.activeRoute("/app")}>
+                        <a href="#"><i className="fa fa-th"></i> <span className="nav-label">Apps</span><span className="pull-right badge badge-success">2</span><span className="fa arrow">&nbsp;</span></a>
+                        <ul className={this.secondLevelActive("/app")}>
+                            <li className={this.activeRoute("/appTodo")}>
+                                <Link to="/appTodo"><i className="fa fa-check-square-o"></i> <span className="nav-label">ToDo</span></Link>
+                            </li>
                             <li>
-                                <Link to="/billingCycle"><i className="fa fa-dollar"></i> <span className="nav-label">Ciclo de Pagamentos</span></Link>
+                                <a href="#"><i className="fa fa-money"></i> <span className="nav-label">My Money</span><span className="fa arrow"></span></a>
+                                <ul className="nav nav-second-level">
+                                    <li className={this.activeRoute("/appDashboard")}>
+                                        <Link to="/appDashboard"><span className="nav-label">Dashboard</span></Link>
+                                    </li>
+                                    <li className={this.activeRoute("/appBillingCycle")}>
+                                        <Link to="/appBillingCycle"><span className="nav-label">Pagamentos</span></Link>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
