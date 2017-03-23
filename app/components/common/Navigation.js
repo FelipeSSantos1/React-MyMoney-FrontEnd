@@ -39,19 +39,19 @@ class Navigation extends Component {
                     </li>
 
                     <li className={this.activeRoute("/app")}>
-                        <a href="#"><i className="fa fa-th"></i> <span className="nav-label">Apps</span><span className="pull-right badge badge-success">2</span><span className="fa arrow">&nbsp;</span></a>
+                        <a href="#"><i className="fa fa-th"></i> <span className="nav-label">Apps</span> <span className="pull-right badge badge-success">2</span><span className="fa arrow">&nbsp;</span></a>
                         <ul className={this.secondLevelActive("/app")}>
                             <li className={this.activeRoute("/appTodo")}>
-                                <Link to="/appTodo"><i className="fa fa-check-square-o"></i> <span className="nav-label">ToDo</span></Link>
+                                <Link to="/appTodo"><i className="fa fa-check-square-o"></i> <span className="navVisible">ToDo</span></Link>
                             </li>
                             <li>
-                                <a href="#"><i className="fa fa-money"></i> <span className="nav-label">My Money</span><span className="fa arrow"></span></a>
+                                <a href="#"><i className="fa fa-money"></i> <span className="navVisible">My Money</span><span className="fa arrow"></span></a>
                                 <ul className="nav nav-second-level">
                                     <li className={this.activeRoute("/appDashboard")}>
-                                        <Link to="/appDashboard"><span className="nav-label">Dashboard</span></Link>
+                                        <Link to="/appDashboard">Dashboard</Link>
                                     </li>
                                     <li className={this.activeRoute("/appBillingCycle")}>
-                                        <Link to="/appBillingCycle"><span className="nav-label">Pagamentos</span></Link>
+                                        <Link to="/appBillingCycle">Pagamentos</Link>
                                     </li>
                                 </ul>
                             </li>

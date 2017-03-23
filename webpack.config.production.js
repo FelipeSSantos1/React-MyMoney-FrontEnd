@@ -9,7 +9,10 @@ var config = {
         app: './app/index',
         vendor: devConfig.entry.vendor
     },
-    resolve: {alias: {}},
+    resolve: {
+        extensions: ['', '.js', '.jsx'],
+        alias: {}
+    },
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -43,7 +46,7 @@ var config = {
         noParse: [],
         loaders: [
             {
-                test: /\.js$/,
+                test: /\.js[x]?$/,
                 loaders: ['react-hot', 'babel'],
                 include: path.join(__dirname, 'app')
             },

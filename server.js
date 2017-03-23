@@ -11,9 +11,9 @@ new WebpackDevServer(webpack(config), {
     inline: true,
     historyApiFallback: true,
     contentBase: "public/"
-}).listen(8000, 'localhost', function (error) {
+}).listen(8080, 'localhost', function (error) {
         if (error) {
             return console.log(error);
         }
-        console.log('Server running at http://localhost:8000/');
+        console.log('Server running at http://localhost:8080/');
     });

@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var config = {
     entry: {
         app: [
-            'webpack-dev-server/client?http://localhost:8000',
+            'webpack-dev-server/client?http://localhost:8080',
             'webpack/hot/only-dev-server',
             './app/index'
         ],
@@ -16,6 +16,10 @@ var config = {
         path: path.join(__dirname, '/public/'),
         filename: 'bundle.js',
         publicPath: '/'
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx'],
+        alias: {}
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),
@@ -36,7 +40,7 @@ var config = {
         noParse: [],
         loaders: [
             {
-                test: /\.js$/,
+                test: /\.js[x]?$/,
                 loaders: ['react-hot', 'babel'],
                 include: path.join(__dirname, 'app')
             },
