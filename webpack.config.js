@@ -19,7 +19,12 @@ var config = {
     },
     resolve: {
         extensions: ['', '.js', '.jsx'],
-        alias: {}
+        alias: {
+            actions: path.resolve(__dirname, 'app/actions/'),
+            components: path.resolve(__dirname, 'app/components/'),
+            reducers: path.resolve(__dirname, 'app/reducers/'),
+            views: path.resolve(__dirname, 'app/views/')
+        }
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),

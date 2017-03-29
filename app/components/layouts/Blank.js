@@ -1,5 +1,5 @@
 import React from 'react';
-import Progress from '../common/Progress';
+import Progress from 'components/common/Progress';
 
 class Blank extends React.Component {
 

@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 
-import Title from '../components/common/title'
-import Box from '../components/common/boxResumo'
-import Grid from '../components/common/grid'
+import {getSummary} from 'actions/dashboard'
+import Title from 'components/common/title'
+import Box from 'components/common/boxResumo'
+import Grid from 'components/common/grid'
 
 const mapStateToProps = state => ({summary: state.dashboard.summary})
+const mapDispatchToProps = dispatch => bindActionCreators({getSummary}, dispatch)
 
 class Dashboard extends Component{
 
+    componentWillMount() {
+        this.props.getSummary()
+    }
+
     render(){
-
         const {debt, credit} = this.props.summary
-
         return(
             <div>
                 <Title title="Dashboard" subTitle="Resumo Consolidado" />
@@ -28,4 +33,4 @@ class Dashboard extends Component{
     }
 }
 
-export default connect(mapStateToProps)(Dashboard)
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
