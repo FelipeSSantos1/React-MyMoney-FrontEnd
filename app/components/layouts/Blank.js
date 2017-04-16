@@ -1,5 +1,6 @@
 import React from 'react';
 import Progress from 'components/common/Progress';
+import Messages from 'components/common/messages'
 
 class Blank extends React.Component {
 
@@ -8,6 +9,7 @@ class Blank extends React.Component {
             <div>
                 <Progress />
                 {this.props.children}
+                <Messages />
             </div>
         )
     }

@@ -5285,11 +5285,11 @@ dd.project-people {
   margin-left: 10px;
 }
 .message {
-  background-color: #fff;
-  border: 1px solid #e7eaec;
+  //background-color: rgba(0, 0, 0, 0.2);
+  //border: 1px solid #e7eaec;
   text-align: left;
   display: block;
-  padding: 10px 20px;
+  padding: 10px 0;
   position: relative;
   border-radius: 4px;
 }
@@ -8554,4 +8554,8 @@ body.md-skin {
   #page-wrapper {
     margin: 0;
   }
+}
+/* Customização */
+.colAction{
+  width: 75px;
 }

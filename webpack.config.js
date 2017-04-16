@@ -23,7 +23,8 @@ var config = {
             actions: path.resolve(__dirname, 'app/actions/'),
             components: path.resolve(__dirname, 'app/components/'),
             reducers: path.resolve(__dirname, 'app/reducers/'),
-            views: path.resolve(__dirname, 'app/views/')
+            views: path.resolve(__dirname, 'app/views/'),
+            modules: path.resolve(__dirname, 'node_modules/')
         }
     },
     plugins: [
@@ -46,7 +47,7 @@ var config = {
         loaders: [
             {
                 test: /\.js[x]?$/,
-                loaders: ['react-hot', 'babel'],
+                loaders: ['react-hot-loader/webpack', 'babel'],
                 include: path.join(__dirname, 'app')
             },
             {

@@ -1,9 +1,10 @@
-import React from 'react';
-import Progress from 'components/common/Progress';
-import Navigation from 'components/common/Navigation';
-import Footer from 'components/common/Footer';
-import TopHeader from 'components/common/TopHeader';
-import { correctHeight, detectBody } from './Helpers';
+import React from 'react'
+import Progress from 'components/common/Progress'
+import Navigation from 'components/common/Navigation'
+import Footer from 'components/common/Footer'
+import TopHeader from 'components/common/TopHeader'
+import { correctHeight, detectBody } from './Helpers'
+import Messages from 'components/common/messages'
 
 class Main extends React.Component {
 
@@ -13,19 +14,13 @@ class Main extends React.Component {
             <div id="wrapper">
                 <Progress />
                 <Navigation location={this.props.location}/>
-
                 <div id="page-wrapper" className={wrapperClass}>
-
                     <TopHeader />
-
                     {this.props.children}
-
                     <Footer />
-
                 </div>
-
+                <Messages />
             </div>
-
         )
     }
 
